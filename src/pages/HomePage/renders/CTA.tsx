@@ -11,14 +11,17 @@ import {
 import { Link as RouterLink } from "react-router-dom";
 
 import ctaBanner from "./cta-banner.jpeg";
+import { useAppSelector } from "../../../app/hooks";
 
 export default function CallToActionWithVideo() {
+  const user = useAppSelector((state) => state.auth.user);
+  
   return (
     <Container maxW={"7xl"}>
       <Stack
         align={"center"}
         justify="space-between"
-        spacing={{ base: 8, md: 12 }}
+        spacing={12}
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 8 }}>
@@ -48,7 +51,7 @@ export default function CallToActionWithVideo() {
               bg={"blue.400"}
               _hover={{ bg: "blue.500" }}
               as={RouterLink}
-              to="/register"
+              to={user ? "/dashboard/" : "/register/"}
             >
               Get started
             </Button>
