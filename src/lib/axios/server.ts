@@ -3,7 +3,7 @@ import jwt_decode from "jwt-decode";
 import dayjs from "dayjs";
 import { setTokens, setUser } from "../../features/auth/authSlice";
 
-const SERVER_URL: string = import.meta.env.VITE_SERVER_URL;
+const SERVER_URL: string = 'https://demo.arjunsingh.com.np/image-steganography';
 
 interface JWTUser {
   token_type: string;

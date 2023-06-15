@@ -8,7 +8,7 @@ interface LoginUserParams {
   password: string;
 }
 
-const SERVER_URL: string = import.meta.env.VITE_SERVER_URL;
+const SERVER_URL: string = 'https://demo.arjunsingh.com.np/image-steganography';
 
 export const loginUser = createAsyncThunk(
   "auth/loginUser",
