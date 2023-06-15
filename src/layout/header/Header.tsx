@@ -92,6 +92,7 @@ const Header = () => {
             color={useColorModeValue("gray.800", "white")}
             ml={1}
             fontWeight={"bold"}
+            // flex="1"
           >
             Image Steganography
           </Link>
@@ -100,8 +101,11 @@ const Header = () => {
           </Flex>
         </Flex>
 
+            <Flex>
+            
+
         <Flex>
-          <HStack mr={2} spacing={2}>
+          <HStack>
             <Tooltip
               label={
                 colorMode === "light" ? "Enable dark mode" : "Enable light mode"
@@ -154,6 +158,7 @@ const Header = () => {
         ) : (
           <Profile handleLogout={handleLogout} user={user} />
         )}
+        </Flex>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
